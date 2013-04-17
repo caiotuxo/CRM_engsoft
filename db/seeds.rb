@@ -92,87 +92,85 @@ SupportCase.create!(:contact => felipe,:description => "Como posso parar de rece
 
 
 #Criando FAQ
-Subject.delete_all
+Assunto.delete_all
 Faq.delete_all
-usabilidade = Subject.create!(:subject => 'Usabilidade', :description => 'Problemas relacionados com a usabilidade do sistema')
-pesquisa_vagas = Subject.create!(:subject => 'Pesquisa de vagas', :description => 'Problemas relacionados com a pesquisa de vagas')
-cadastro = Subject.create!(:subject => 'Meu cadastro', :description => 'Problemas relacionados com o cadastro e o acesso aos dados pessoais')
-curriculo = Subject.create!(:subject => 'Meu currículo', :description => 'Problemas relacionados com o envio de currículos e a sua atualização')
+usabilidade = Assunto.create!(:subject => 'Usabilidade', :description => 'Problemas relacionados com a usabilidade do sistema')
+pesquisa_vagas = Assunto.create!(:subject => 'Pesquisa de vagas', :description => 'Problemas relacionados com a pesquisa de vagas')
+cadastro = Assunto.create!(:subject => 'Meu cadastro', :description => 'Problemas relacionados com o cadastro e o acesso aos dados pessoais')
+curriculo = Assunto.create!(:subject => 'Meu currículo', :description => 'Problemas relacionados com o envio de currículos e a sua atualização')
 
 tab = "&nbsp; &nbsp; "
 f1 = Faq.create!(
-  question: 'Como posso cadastrar uma duvida no sistema?',
-  answer:
-    """Basta clicar em cadastrar duvida.""",
-  subject: usabilidade
+  pergunta: 'Como posso cadastrar uma duvida no sistema?',
+  resposta:    """Basta clicar em cadastrar duvida.""",
+  assunto: usabilidade
 )
 f2 = Faq.create!(
-  question: 'Como pesquisar uma vaga pelo seu código?',
-  answer:
+  pergunta: 'Como pesquisar uma vaga pelo seu código?',
+  resposta:
     """Todas as vagas divulgadas no portal possuem um código.
     Esse código pode ser encontrado na parte superior do anúncio ou no link da vaga (URL).\n
     Para pesquisar vagas pelo código, acesse o portal e siga os passos abaixo:
     #{tab}1) Na página de “Acesso de candidatos”, selecione a opção “Pesquisa de vagas” no menu superior da página do ambiente de candidatos;
     #{tab}2) Insira o código da vaga na barra de pesquisa e clique no botão “Pesquisar“.""",
-  subject: pesquisa_vagas
+  assunto: pesquisa_vagas
 )
 f3 = Faq.create!(
-  question: 'Como faço para pesquisar vagas?',
-  answer:
-    """Para pesquisar as vagas oferecidas pelas empresas que contratam é muito simples e prático!\n
+  pergunta: 'Como faço para pesquisar vagas?',
+resposta:    """Para pesquisar as vagas oferecidas pelas empresas que contratam é muito simples e prático!\n
     Acesse o portal e siga os passos a seguir:
     #{tab}1) Na página de “Acesso de candidatos”, selecione a opção ”Pesquisa de vagas”;
     #{tab}2) Na página de pesquisa, você pode pesquisar por palavras-chave e refinar os resultados por filtros.""",
-  subject: pesquisa_vagas
+  assunto: pesquisa_vagas
 )
 f4 = Faq.create!(
-  question: 'Quero cancelar/excluir meu currículo cadastrado, como faço?',
-  answer:
+  pergunta: 'Quero cancelar/excluir meu currículo cadastrado, como faço?',
+  resposta:
     """É possível desativar o cadastro. 
     Porém, não é possível excluí-lo por completo, pois ele já foi compartilhado com algumas empresas.
     Seria como enviar um currículo impresso pelo correio e depois tentar recolhê-lo de volta, entende?\n
     Para desativar um cadastro, basta efetuar seu login no portal.
     Em sua área exclusiva de serviços, vá até a opção “Desativar o uso de nossos serviços”.""",
-  subject: cadastro
+  assunto: cadastro
 )
 f5 = Faq.create!(
-  question: 'Esqueci minha identificação e/ou minha senha de acesso. O que fazer?',
-  answer:
+  pergunta: 'Esqueci minha identificação e/ou minha senha de acesso. O que fazer?',
+  resposta:
     """Acesse a área de candidatos e siga os passos abaixo:
     #{tab}1) Clique em “Login”, no topo da página;
     #{tab}2) Na tela de login, clique na opção “Se você esqueceu sua identificação, clique aqui” ou em “Se você esqueceu sua identificação/login, clique aqui“;
     #{tab}3) Na página seguinte informe o endereço de e-mail cadastrado no site e confirme. Você receberá automaticamente sua identificação e senha no endereço de e-mail cadastrado;
     #{tab}4) Ou, caso você tenha esquecido sua senha, será apresentado uma mensagem com o lembrete cadastrado por você e algumas outras dicas como as inicias de seu nome e seu provedor de email cadastrado.
     #{tab}5) Se ainda assim você não recordar sua senha, clique em: “mesmo com o lembrete acima, você não consegue lembrar de sua senha clique aqui” e ela será encaminhada automaticamente para e-mail que você cadastrou no site.""",
-  subject: cadastro
+  assunto: cadastro
 )
 f6 = Faq.create!(
-  question: 'O meu endereço de e-mail mudou. Como alterá-lo?',
-  answer:
+  pergunta: 'O meu endereço de e-mail mudou. Como alterá-lo?',
+  resposta:
     """Para alterar o seu endereço de e-mail, acesse a área de candidatos do portal e, se você já estiver logado no site, basta clicar em “Sua página de serviços” no menu superior da página do ambiente de candidatos.""",
-  subject: cadastro
+  assunto: cadastro
 )
 f7 = Faq.create!(
-  question: 'Como cadastrar o meu currículo?',
-  answer:
+  pergunta: 'Como cadastrar o meu currículo?',
+  resposta:
     """Para cadastrar seu currículo, acesse o portal e siga os passos abaixo:
     #{tab}1) Clique em “Acesso de candidatos”;
     #{tab}2) No menu superior da página do ambiente de candidatos, clique em “Cadastre seu currículo”;
     #{tab}3) Na página seguinte clique em “cadastre-o agora”;
     #{tab}4) Preencha os campos solicitados.""",
-  subject: curriculo
+  assunto: curriculo
 )
 f8 = Faq.create!(
-  question: 'Quero enviar meu currículo em word, como faço?',
-  answer:
+  pergunta: 'Quero enviar meu currículo em word, como faço?',
+  resposta:
     """Os processos seletivos são feitos pelo site, por isso para participar é necessário preencher o formulário de cadastro do seu currículo no portal.""",
-  subject: curriculo
+  assunto: curriculo
 )
 f9 = Faq.create!(
-  question: 'Como faço para atualizar ou corrigir os dados meu currículo?',
-  answer:
+  pergunta: 'Como faço para atualizar ou corrigir os dados meu currículo?',
+  resposta:
     """Para atualizar ou corrigir os seus dados, basta efetuar seu login no portal, acessar sua página exclusiva de serviços a candidatos, clicar em “Rever ou atualizar seu currículo” e, em seguida, clicar em “Atualizar o seu currículo”.""",
-  subject: curriculo
+  assunto: curriculo
 )
 
 #Criando newsletter

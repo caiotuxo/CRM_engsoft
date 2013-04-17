@@ -1,6 +1,6 @@
 # encoding: UTF-8
 class Faq < ActiveRecord::Base
-  attr_accessible :resposta, :pergunta, :subject_id, :assunto
+  attr_accessible :resposta, :pergunta, :assunto_id, :assunto
   belongs_to :assunto
 
   validates :pergunta, :presence => {:message => "Favor digitar uma pergunta"}

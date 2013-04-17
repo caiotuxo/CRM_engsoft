@@ -17,7 +17,7 @@
           <% @faqs.each do |faq| %>
           <li>
             <h4 id="faq-question-1">
-				(<%= link_to faq.assunto.subject, "#", onclick: "filtrar_assunto('#{faq.subject.subject}')" %>) <%= faq.pergunta %>
+				(<%= link_to faq.assunto.subject, "#", onclick: "filtrar_assunto('#{faq.assunto.subject}')" %>) <%= faq.pergunta %>
 			</h4>
             <p><%= simple_format(faq.resposta).html_safe %><p>
           </li>
