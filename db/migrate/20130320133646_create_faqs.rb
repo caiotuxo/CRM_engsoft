@@ -1,12 +1,12 @@
 class CreateFaqs < ActiveRecord::Migration
   def change
     create_table :faqs do |t|
-      t.string :question
-      t.text :answer
-      t.references :subject
+      t.string :pergunta
+      t.text :resposta
+      t.references :assunto
 
       t.timestamps
     end
-    add_index :faqs, :subject_id
+    add_index :faqs, :assunto_id
   end
 end

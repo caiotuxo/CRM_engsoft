@@ -1,0 +1,8 @@
+Especificação - 
+
+O Componente escolhido foi a criação de Faqs, e a sua exibição em uma tela personalizada mais atraente par ao usuário final, utilizando-se de javascript para evitar sobrecarga ao servidor e diminuir o tempo de espera para o usuário.
+Como resultado, temos em /faqs todo o processo de cadastro de faqs, em /new, /show, e /index..
+em /faqs/faqs_viewer podemos ver o resultado final da implementação da tela.
+Foi necessário conhecimento prévio em rails, além de HTML/CSS, javascript e um pouco de coffee script.(search dinamico)
+
+ 
