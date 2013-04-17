@@ -3,8 +3,7 @@ class @Faq
     @questionList = @container.find("> li")
     @questions = ({q: $(el).find("> h4"), a: $(el).find("> p")} for el in @container.find("li"))
 
-    @searchInput = $("<input type='text' id='faq-search' class='full-width' placeholder='enter keyword here...'/>")
-
+    @searchInput = $("<input type='text' id='faq-search' class='full-width' placeholder='digite a palavra aqui...'/>")
     @container.before @searchInput
 
     i = 0
@@ -39,3 +38,4 @@ class @Faq
       else
         @questionList.each -> $(@).show()
         @tocLinks.each -> $(@).show()
+

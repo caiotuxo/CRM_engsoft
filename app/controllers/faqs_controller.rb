@@ -4,6 +4,11 @@ class FaqsController < ApplicationController
   
   # GET /faqs
   # GET /faqs.json
+
+  def faqs_viewer
+    @faqs = Faq.all
+  end
+
   def index
     @faqs = Faq.sorted
     if @subject

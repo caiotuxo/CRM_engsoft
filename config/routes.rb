@@ -23,8 +23,11 @@ CRMEngsoft::Application.routes.draw do
   resources :subjects
 
 
-  resources :faqs
-
+  resources :faqs do
+    collection do
+        get :faqs_viewer
+      end
+    end
 
   resources :contacts
 

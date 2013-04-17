@@ -6,9 +6,10 @@ class Faq < ActiveRecord::Base
   validates :question,
     :presence => {:message => "Favor digitar uma pergunta"},
     :uniqueness => {:message => "Essa pergunta já existe no sistema"},
-    :length => { :in => 5..255 , :message => "Tem que ter entre 5 e 255 caracteres"}
+    :length => { :in => 5..255 , :message => "Deve que ter entre 5 e 255 caracteres"}
   validates :answer, :presence => {:message => "Favor digitar uma resposta"}
   validates :subject_id, :presence => {:message => "Favor digitar um assunto"}
+
 
   scope :sorted, order('faqs.subject_id ASC')
 end

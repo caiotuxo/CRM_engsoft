@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
           endereco << "/" + obj["estado"]
         end
       end
+      
       if not obj["pais"].nil?
         endereco << " - " + obj["pais"]
       end
