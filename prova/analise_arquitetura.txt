@@ -1,0 +1,6 @@
+Analise E Arquitetura
+
+O Framework Ruby on Rails trabalha com Arquitetura MVC, assim tudo é dividido em Model, Views e Controllers.
+Como Tratava-se de um componente desde a fase de model, em todas as camadas da arquitetura foram feitas alterações. No Model, com a criação e edição de mensagens de Erro.
+Nos controllers, feito através da adição de uma nova action, faqs_viewer.
+A camada mais alterada da arquitetura foi a view, cujo HTML/CSS e javascript foram os quesitos de maior impacto.

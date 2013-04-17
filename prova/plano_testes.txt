@@ -1,0 +1,6 @@
+Plano de Testes
+
+Associado ao framework foi possível instalar uma gem chamada "spec". Com ela é possível automatizar os testes unitários do projeto, utilizando o comando rspec e o caminho do teste.
+Com os testes unitários feitos, é possível verificar os error de gravação e validação dos models.
+A segunda parte dos testes cabe a testes de usuários, através do cadastro de informações nos cruds do sistema, além de alteraçoões nos códigos dos formulários, a fim de injetar informações falsas.
+Veremos que o framework é bastante seguro em relação a essas violações.
