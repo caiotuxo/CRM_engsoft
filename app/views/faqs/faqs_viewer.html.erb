@@ -12,14 +12,14 @@
       <div class="padded">
  
         <ol class="faq-list">
-          <% collection_select(:faq, :subjects, Subject.all, :subject, :subject, :prompt => "Todos", :id => "subjects") 
+          <% collection_select(:faq, :subjects, Assunto.all, :subject, :subject, :prompt => "Todos", :id => "subjects") 
         %>
           <% @faqs.each do |faq| %>
           <li>
             <h4 id="faq-question-1">
-				(<%= link_to faq.subject.subject, "#", onclick: "filtrar_assunto('#{faq.subject.subject}')" %>) <%= faq.question %>
+				(<%= link_to faq.assunto.subject, "#", onclick: "filtrar_assunto('#{faq.subject.subject}')" %>) <%= faq.pergunta %>
 			</h4>
-            <p><%= simple_format(faq.answer).html_safe %><p>
+            <p><%= simple_format(faq.resposta).html_safe %><p>
           </li>
           <% end %>
         </ol>

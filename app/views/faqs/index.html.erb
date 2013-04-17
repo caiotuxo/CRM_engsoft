@@ -20,8 +20,8 @@
   					<%= link_to '', {:action => 'edit', :id => faq.id}, :class => "icon-edit", :title => "Editar" %>&nbsp;
   					<%= link_to '', {:action => 'delete', :id => faq.id}, :class => "icon-remove", :title => "Deletar" %>
   				</td>
-			    <td><%= link_to faq.subject.subject, {:controller => 'subjects', :action => 'show', :id => faq.subject.id}, :title => faq.subject.description %></td>
-				<td><%= faq.question %></td>
+			    <td><%= link_to faq.subject.subject, {:controller => 'subjects', :action => 'show', :id => faq.assunto.id}, :title => faq.subject.description %></td>
+				<td><%= faq.pergunta %></td>
 				<td><%= truncate(faq.answer, :length => 60) %></td>
 			  </tr>
 			<% end %>
